@@ -39,7 +39,7 @@ async function uploadFile(filePath) {
     try {
     
         const formData = new FormData();
-        formData.append('file', fs.createReadStream(filePath), 'audio.m4a');
+        formData.append('file', fs.createReadStream(filePath), 'audio.mp3');
 
         
         const uploadResponse = await uploadInstance.post('', formData, {
