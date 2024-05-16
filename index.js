@@ -62,7 +62,7 @@ async function processAndUpload(ytLink) {
 
         const videoInfo = await ytdl.getInfo(ytLink);
         const videoTitle = videoInfo.videoDetails.title.replace(/[^\w\s]/gi, '');
-        const m4aFilePath = path.join(__dirname, `${videoTitle}.m4a`);
+        const m4aFilePath = path.join(__dirname, `${videoTitle}.mp3`);
 
         fs.writeFileSync(m4aFilePath, videoBuffer);
 
